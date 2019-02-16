@@ -1,0 +1,25 @@
+{
+  "name": "@types/bingmapservices",
+  "version": "0.0.1",
+  "description": "Type Definitions for BingMapServices",
+  "main": "\"\"",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/utdcometsoccer/-types-BingMapServices.git"
+  },
+  "keywords": [
+    "BingMapServices",
+    "Typescript",
+    "Type",
+    "Definitions"
+  ],
+  "author": "Idaho Edokpayi <idaho@whoisidaho.com> (https://github.com/utdcometsoccer/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/utdcometsoccer/-types-BingMapServices/issues"
+  },
+  "homepage": "https://github.com/utdcometsoccer/-types-BingMapServices#readme"
+}
