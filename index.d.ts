@@ -30,3 +30,25 @@ declare namespace BingMapServices {
         RestEndPointUrl:string;
     }
 }
+
+declare module "react-bingmaps" {
+  export interface IReactBingmapsProps {
+    bingmapKey: string;
+    center?:number[];
+    mapTypeId?: string;
+    navigationBarMode?: string;
+    supportedMapTypes?: string[];
+    zoom?: number;
+    disableStreetside?: boolean;
+    pushPins?: any[];
+    heading?: any;
+    infoboxes?: any[];
+    infoboxesWithPushPins?: any[];
+    getLocation?: any;
+    regularPolygons?: any[];
+    boundary?: any;
+  }
+  export class ReactBingmaps extends React.Component<IReactBingmapsProps, {}>{
+    render(): JSX.Element;
+  }
+}
