@@ -24,31 +24,38 @@ declare class BingMapServices {
     Map(Center:IPoint,ClickHandler:IMapClick):JSX.Element;
 }
 
+declare interface IAddress{}
 declare namespace BingMapServices {
     export interface BingMapServicesOptions {
         Key: string;
         RestEndPointUrl:string;
     }
+
+    export interface IResource{
+        __type:string;
+        bbox:number[];
+        name:string;
+        point:IPoint;
+        address:IAddress;
+        confidence:string;
+        entityType:string;
+        geocodePoints:IPoint[];
+        matchCodes:string[];
+    }
+    export interface IResourceSet{
+        estimatedTotal:number;
+        resources:IResource[]; 
+    
+    }
+
+    export interface ILocationSVCResponse{
+        authenticationResultCode:string;
+        brandLogoUri:string;
+        copyright:string;
+        statusCode:number;
+        statusDescription:string;
+        traceId:string;
+        resourceSets:IResourceSet[];
+    }
 }
 
-declare module "react-bingmaps" {
-  export interface IReactBingmapsProps {
-    bingmapKey: string;
-    center?:number[];
-    mapTypeId?: string;
-    navigationBarMode?: string;
-    supportedMapTypes?: string[];
-    zoom?: number;
-    disableStreetside?: boolean;
-    pushPins?: any[];
-    heading?: any;
-    infoboxes?: any[];
-    infoboxesWithPushPins?: any[];
-    getLocation?: any;
-    regularPolygons?: any[];
-    boundary?: any;
-  }
-  export class ReactBingmaps extends React.Component<IReactBingmapsProps, {}>{
-    render(): JSX.Element;
-  }
-}
